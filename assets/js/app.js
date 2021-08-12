@@ -12,12 +12,12 @@ import { Leon, Lobo, Aguila, Oso, Serpiente } from "./animal.js"
   const TarjetitasDeAnimales = [];
 
   let Animales;
-  //Obtencion del JSON mediante async/await 
+  //Obtencion del JSON mediante async/await *fetch es para llamar es como src
   const Request = await fetch("/animales.json");
   const ParsedRequest = await Request.json();
   Animales = ParsedRequest.animales;
 
-  //Creacion de la card y foto en el html para luego ser mostrada en el modal
+  //Creacion de la card y foto en el html para luego ser mostrada en el modal con html
   function actualizarVista() {
     const zonaDeTarjetasElement = document.querySelector(".zona-de-tarjetas");
     zonaDeTarjetasElement.innerHTML = "";
@@ -53,6 +53,7 @@ import { Leon, Lobo, Aguila, Oso, Serpiente } from "./animal.js"
           <p class="text-center">${animal.Comentarios}</p>
         `;
       });
+      //clck funciona de llamando animal mas nombre tambin if llama al otro
 
       DIVBoton.addEventListener("click", () => {
         if (animal.Nombre === "Leon") {

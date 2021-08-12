@@ -8,7 +8,7 @@ export default
     #img;
     #comentarios;
     #sonido;
-
+//constructor es la forma en que se ordena para que tengan los datos
     constructor(nombre, edad, img, comentarios, sonido) {
         this.#nombre = nombre;
         this.#edad = edad;
@@ -41,7 +41,7 @@ export default
         return this.#comentarios;
     }
 }
-
+//... califica dentro de llamando a los recursos del padrea
 export class Leon extends Animal {
     constructor(...args) {
         super(...args);
@@ -84,6 +84,7 @@ export class Serpiente extends Animal {
     }
 
     Sisear() {
+        //copiado clase revisar pere es indiferente de la fora de llamado 
         player.src = `./assets/sounds/${this.Sonido}`;
         player.load();
         player.play();
